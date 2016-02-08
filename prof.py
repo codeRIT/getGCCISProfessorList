@@ -7,7 +7,7 @@ import requests
 
 def main():
     dept = "computer-science" 
-    BASE_URL= "https://www.rit.edu/gccis/people" 
+    BASE_URL= "https://www.rit.edu/gccis/people/#{}" 
     html = requests.get(BASE_URL.format(dept)).text
     soup = BeautifulSoup(html)
     for staff in soup.findAll('div', 'staff-info'):
